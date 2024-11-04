@@ -1,0 +1,166 @@
+ <!-- Hero Section -->
+ <section class="hero-section text-center">
+    <h1>RESERVA TU CANCHA AHORA <br> Y VIVE LA EMOCION DEL FUTBOL!</h1>
+    
+    <div class="search-bar mx-auto">
+      <div class="row" [formGroup]="buscarComponent">
+         <div class="col-md-3">
+            <input type="text" class="form-control" formControlName="Ubicacion" placeholder="Ubicación">
+          </div>
+          <div class="col-md-2">
+             <!-- Desplegable para Tipo -->
+              <select class="form-control" formControlName="Tipo">
+                  <option value="" disabled selected>Tipo</option>
+                  <option value="futbol">Fútbol</option>
+                  <option value="basketball">Basketball</option>
+                  <option value="voleyball">Vóleibol</option>
+              </select>
+          </div>
+          <div class="col-md-3">
+            <input type="date" class="form-control" formControlName="Fecha" placeholder="Fecha">
+          </div>
+          <div class="col-md-2">
+            <input type="time" class="form-control" formControlName="Hora" placeholder="Hora">
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-success w-100" (click)="__buscar()">Buscar</button>
+          </div>
+ 
+        
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Promotion Section -->
+  <section class="promotion-section text-center">
+    <div class="content-container">
+        <div class="promotion-banner">
+           <img src="assets/images/bg_promo.png"/>
+        </div>
+    </div>
+    
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section text-center">
+    <div class="content-container">
+      <h2 class="testimonials-title">Con la confianza de miles de <br> Clientes felices</h2>
+      <p class="testimonials-subtitle">¡Llegá a más clientes, ocupá las reservas canceladas y espacios libres!</p>
+  
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+              <div class="col-md-4">
+                <div class="testimonial">
+                  <img src="assets/images/user1.png" alt="Laura Gonzáles" class="testimonial-img">
+                  <h5>Laura Gonzáles</h5>
+                  <span>Lima, Perú</span>
+                  <div class="rating">4.5</div>
+                  <p>“Increíble experiencia! Reservé una cancha en segundos. Fácil de usar y excelente servicio al cliente.”</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="testimonial">
+                  <img src="assets/images/user2.png" alt="Luis Álvarez" class="testimonial-img">
+                  <h5>Luis Álvarez</h5>
+                  <span>Lima, Perú</span>
+                  <div class="rating">4.5</div>
+                  <p>“Altamente recomendado! Encontré la cancha perfecta para mi equipo. Proceso de reserva sin complicaciones.”</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="testimonial">
+                  <img src="assets/images/user3.png" alt="Diego Escate" class="testimonial-img">
+                  <h5>Diego Escate</h5>
+                  <span>Lima, Perú</span>
+                  <div class="rating">4.5</div>
+                  <p>“Fantástico servicio! Reservé con amigos y todo salió genial. Definitivamente volveré a reservar aquí.”</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <!-- Más testimonios en grupos de tres -->
+              <div class="col-md-4">
+                <div class="testimonial">
+                  <img src="assets/images/user1.png" alt="Usuario 1" class="testimonial-img">
+                  <h5>Usuario 1</h5>
+                  <span>Ciudad, País</span>
+                  <div class="rating">4.7</div>
+                  <p>“Excelente plataforma para reservas. Fácil y rápido.”</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="testimonial">
+                  <img src="assets/images/user2.png" alt="Usuario 2" class="testimonial-img">
+                  <h5>Usuario 2</h5>
+                  <span>Ciudad, País</span>
+                  <div class="rating">4.6</div>
+                  <p>“Muy útil para organizar nuestros juegos.”</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="testimonial">
+                  <img src="assets/images/user3.png" alt="Usuario 3" class="testimonial-img">
+                  <h5>Usuario 3</h5>
+                  <span>Ciudad, País</span>
+                  <div class="rating">4.8</div>
+                  <p>“Buena interfaz y buen servicio al cliente.”</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Controles de navegación -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <!-- Newsletter Section -->
+  <section class="newsletter-section text-center">
+    <div class="newsletter-container">
+      <h3>Únete a nuestro boletín <br> y no te pierdas ninguna novedad</h3>
+      <p class="newsletter-description">Recibe actualizaciones semanales sobre nuestros productos directamente en tu email. ¡No te pierdas nuestras novedades!</p>
+      <form class="newsletter-form">
+        <div class="input-group">
+          <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+          <input type="email" class="form-control" placeholder="youremail123@gmail.com" required>
+          <button class="btn btn-dark">Suscribir</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ads Section -->
+  <section class="sponsors-section text-center">
+    <div class="content-container">
+      <div class="sponsor-logos">
+        <img src="assets/images/ads1.png" alt="Adidas" class="sponsor-logo">
+        <img src="assets/images/ads2.png" alt="Nike" class="sponsor-logo">
+        <img src="assets/images/ads3.png" alt="Polo" class="sponsor-logo">
+        <img src="assets/images/ads4.png" alt="Reebok" class="sponsor-logo">
+        <img src="assets/images/ads5.png" alt="Gatorade" class="sponsor-logo">
+        <img src="assets/images/ads6.png" alt="Under Armour" class="sponsor-logo">
+        <img src="assets/images/ads7.png" alt="Under Armour" class="sponsor-logo">
+        <img src="assets/images/ads8.png" alt="Under Armour" class="sponsor-logo">
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  

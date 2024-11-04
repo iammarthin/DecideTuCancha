@@ -1,0 +1,191 @@
+.search-component {
+    max-width: 1280px;
+    margin: 146px auto; /* Espacio superior de 30px para separar del header */
+    padding: 20px;
+  }
+  
+  .search-form {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group button {
+    align-self: flex-end;
+    width: 100%;
+    margin-top: auto;
+  }
+  
+  .map-container {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .map-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .results-container {
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .results-info {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .results-view-options {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .results-view-options button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  
+  .view-list.active,
+  .view-grid.active {
+    color: #28a745;
+  }
+  
+  .results-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .result-item {
+    display: flex;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .result-image-container {
+    position: relative;
+    margin-right: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .result-image {
+    object-fit: cover;
+  }
+  
+  .price-tag {
+    position: absolute;
+    top: 10px;
+    left: 210px;
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+  
+  .result-content {
+    flex: 1;
+  }
+  .result-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  
+  .sport-type {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .place-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .rating {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .rating .fa-star {
+    color: #ffc107;
+    margin-left: 5px;
+    margin-right: 2px;
+  }
+  
+  .reviews {
+    color: #888;
+    margin-left: 5px;
+  }
+  
+  .favorite-icon {
+    color: #007bff;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .description {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  .address,
+  .facilities {
+    font-size: 0.8rem;
+    color: #777;
+    margin: 3px 0;
+  }
+  
+  .time-options {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .time-slot {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  .reserve-button {
+    margin-top: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

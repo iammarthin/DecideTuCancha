@@ -1,0 +1,214 @@
+
+  
+  .hero-section {
+    background: url('/assets/images/hero-bg.png') no-repeat center center/cover;
+    color: white;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #00B04B;
+  }
+  
+  .search-bar {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+  }
+  
+  .content-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .promotion-section {
+    background-color: #f9f9f9;
+  }
+  
+  .promotion-banner {
+    display: inline-block;
+    padding: 20px;
+  }
+  
+  .promo-days, .promo-price, .promo-text {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .testimonials-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .testimonials-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 10px;
+  }
+  
+  .testimonials-subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .testimonial {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 250px; /* Altura fija para todos los testimonios */
+  }
+  
+  .testimonial-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .rating {
+    color: #ffc107;
+    font-weight: bold;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: #28a745; /* Color verde para los botones de control */
+    border-radius: 50%;
+    padding: 10px;
+  }
+  
+  
+  .newsletter-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #28a745; /* Color de fondo verde */
+    border-radius: 15px; /* Bordes redondeados */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .newsletter-container {
+    color: white;
+    padding: 30px;
+    max-width: 800px;
+    text-align: left;
+  }
+  
+  .newsletter-container h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .newsletter-description {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 20px;
+  }
+  
+  .newsletter-form .input-group {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden; /* Asegura que el borde redondeado abarque todo el grupo */
+  }
+  
+  .newsletter-form .form-control {
+    border: none;
+    border-radius: 0;
+    padding: 10px 15px;
+    flex: 1;
+  }
+  
+  .newsletter-form .btn {
+    border-radius: 0;
+    font-weight: bold;
+  }
+  
+  .input-group-text {
+    background-color: white;
+    color: #28a745;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+  }
+  
+  .input-group-text i {
+    font-size: 1rem;
+  }
+  
+  .newsletter-form .btn-dark {
+    background-color: #004d40;
+    color: white;
+    padding: 10px 20px;
+  }
+  
+
+  .sponsors-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #00B04B;
+    padding: 40px 20px;
+  }
+  
+  
+  .sponsor-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .sponsor-logo {
+    width: 100px; /* Tamaño ajustado para cada logo */
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .sponsor-logo:hover {
+    transform: scale(1.1); /* Efecto de agrandamiento al pasar el cursor */
+  }
+  
+  
+  .footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+  }
+  
+  .footer .brands img {
+    margin: 0 10px;
+    width: 50px;
+  }
+  
+  .footer p, .footer nav a {
+    color: #ccc;
+    font-size: 0.9rem;
+  }
+  
+  .footer .social-icons img {
+    width: 30px;
+    margin: 0 5px;
+  }
+  
