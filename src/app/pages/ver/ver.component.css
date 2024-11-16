@@ -1,0 +1,137 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.facility-details {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 1rem;
+  margin: 200px auto; /* Espacio superior de 30px para separar del header */
+}
+
+header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+header .back-link {
+  text-decoration: none;
+  color: #00b04b;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.availability {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.availability h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.time-slots {
+  margin-top: 50px;
+  display: flex;
+  justify-content: left;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.time-slots button {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.time-slots button:hover {
+  background-color: #00b04b;
+  color: #fff;
+}
+
+.btnReserva {
+  display: flex;
+  justify-content: right;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.btn.green {
+  padding: 0.75rem 1.5rem;
+  background-color: #00b04b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn.green:hover {
+  background-color: #007b3e;
+}
+
+.info-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: justify;
+}
+
+.description {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.description ul {
+  list-style: none;
+  padding: 0;
+}
+
+.description ul li {
+  margin-bottom: 0.5rem;
+}
+
+.description h3,
+.description h4 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.rating {
+  font-size: 1.5rem;
+  color: #ffcc00;
+  margin-top: 1rem;
+}
+
+.map {
+  justify-content: right;
+}
+
+.map iframe {
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+}

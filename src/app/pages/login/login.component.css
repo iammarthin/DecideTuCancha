@@ -1,0 +1,99 @@
+
+.login-component {
+    max-width: 400px;
+    width: 100%;
+    margin: 200px auto; /* Espacio superior de 30px para separar del header */
+    padding: 20px;
+ 
+  }
+  
+.form-container {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+ 
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+form {
+    display: none;
+}
+
+form.active {
+    display: block;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+button.green {
+    background-color: #00b04b;
+    color: #fff;
+}
+
+button.google {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+button.apple {
+    background-color: #000;
+    color: #fff;
+}
+
+button.facebook {
+    background-color: #4267B2;
+    color: #fff;
+}
+
+p.toggle-form {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+p.toggle-form a {
+    color: #00b04b;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+p.toggle-form a:hover {
+    text-decoration: underline;
+}

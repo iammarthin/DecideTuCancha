@@ -1,1 +1,48 @@
-<p>login works!</p>
+<div class="login-component">
+    <div class="form-container">
+        <img src="assets/images/logo_.png" alt="Decide Tu Cancha" class="logo">
+        <h2 id="form-title">Iniciar Sesión</h2>
+    
+        <!-- Formulario de Inicio de Sesión -->
+        <form id="login-form" class="active">
+            <label for="email">E-mail: *</label>
+            <input type="email" id="email" placeholder="Ingrese su e-mail" required>
+            <label for="email">Contraseña: *</label>
+            <input type="password" id="password" placeholder="Ingrese su contraseña" required>
+            <button type="submit" class="btn green">Iniciar Sesión</button>
+            <p>o</p>
+            <button type="button" class="btn google">Acceder con Google</button>
+            <button type="button" class="btn apple">Acceder con Apple</button>
+            <button type="button" class="btn facebook">Acceder con Facebook</button>
+            <p class="toggle-form">¿No tienes cuenta? <a href="#" id="switch-to-register">Regístrate</a></p>
+        </form>
+    
+        <!-- Formulario de Registro -->
+        <form id="register-form">
+            <label for="name">Nombre Completo:</label>
+            <input type="text" id="name" placeholder="Ingrese su nombre completo" required>
+            <label for="email-register">E-mail:</label>
+            <input type="email" id="email-register" placeholder="Ingrese su e-mail" required>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" placeholder="Cree una contraseña" required>
+            <label for="celular">Celular:</label>
+            <input type="number" id="celular" placeholder="Ingrese su celular">
+            <label for="fechanacimiento">Fecha Nacimiento:</label>
+            <input type="date" id="fechanacimiento" placeholder="dd/mm/yyy">
+            <label for="sexo" id="sexo">Genero:</label>
+            <select class="form-select">
+                <option selected>Seleccione</option>
+                <option value="F">Femenino</option>
+                <option value="M">Masculino</option>
+              </select>
+            <button type="submit" class="btn green">Registrarse</button>
+            <p class="toggle-form">¿Ya tienes cuenta? <a href="#" id="switch-to-login">Inicia Sesión</a></p>
+        </form>
+    </div>
+
+ 
+
+</div>
+
+
+

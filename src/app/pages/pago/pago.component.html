@@ -1,1 +1,98 @@
-<p>pago works!</p>
+<div class="container">
+    <!-- Barra de pasos -->
+    <div class="steps">
+      <span class="circle" [class.active]="currentStep >= 1">1</span>
+      <span class="circle" [class.active]="currentStep >= 2">2</span>
+      <span class="circle" [class.active]="currentStep >= 3">3</span>
+      <span class="circle" [class.active]="currentStep >= 4">4</span>
+      <div class="progress-bar">
+        <span class="indicator" [style.width.%]="(currentStep - 1) * 33.33"></span>
+      </div>
+    </div>
+  
+    <!-- Contenido dinámico según el paso -->
+    <div *ngIf="currentStep === 1" class="step-content">
+      <h3 style="color: #00b04b;">Seleccione el método de Pago</h3>
+      <div class="payment-methods">
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="paypal" value="paypal" [(ngModel)]="selectedMethod">
+            <label class="form-check-label">Paypal</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="payment" value="credit-card" [(ngModel)]="selectedMethod">
+            <label class="form-check-label">Tarjeta de crédito</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="payment" value="yape" [(ngModel)]="selectedMethod">
+            <label class="form-check-label">Yape</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="payment" value="plin" [(ngModel)]="selectedMethod">
+            <label class="form-check-label">Plin</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="payment" value="paefe" [(ngModel)]="selectedMethod">
+            <label class="form-check-label">Pago Efectivo</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="payment" value="mepago" [(ngModel)]="selectedMethod">
+            <label class="form-check-label">Mercado Pago</label>
+        </div>
+        
+      </div>
+
+      <div class="buttons">
+        <button (click)="nextStep()">Continuar</button>
+      </div>
+
+    </div>
+  
+    <div *ngIf="currentStep === 2" class="step-content">
+        <h3 style="color: #00b04b;">Tarjeta de Crédito</h3>
+        <div class="card-icons">
+          <img src="assets/images/cards.png" alt="Visa">
+        </div>
+        <div class="form-group">
+          <label for="card-number">Número de Tarjeta</label>
+          <input class="form-control" type="number" id="card-number" placeholder="xxxx–xxxx–xxxx–xxxx">
+        </div>
+        <div class="input-row">
+          <div class="form-group">
+            <label for="expiry-date">Fecha de Vencimiento</label>
+            <input class="form-control" type="number" id="expiry-date" placeholder="dd/mm">
+          </div>
+          <div class="form-group">
+            <label for="cvv">CVV</label>
+            <input class="form-control" type="number" id="cvv" placeholder="123">
+          </div>
+        </div>
+
+        <div class="buttons">
+            <button (click)="nextStep()">Pagar</button>
+        </div>
+ 
+    </div>
+  
+    <div *ngIf="currentStep === 3" class="step-content">
+      <h3 style="color: #00b04b;">Introducir el código que se envió a tu móvil</h3>
+      <div class="form-group" style="display: flex; justify-content: center; padding-top: 20px;">
+        <img src="assets/images/candado.png" style="height: 50px;" />
+        <input class="form-control" style="width: 180px; margin-left: 20px;" type="number" placeholder="X–X–X–X–X">
+
+      </div>
+
+      <div class="buttons">
+        <button (click)="nextStep()">Validar</button>
+      </div>
+      
+    </div>
+  
+    <div *ngIf="currentStep === 4" class="step-content">
+      <div class="success-icon">
+        <img src="assets/images/check.png" />
+      </div>
+      <h3>El pago se realizó con éxito</h3>
+    </div>
+  
+  </div>
+  
