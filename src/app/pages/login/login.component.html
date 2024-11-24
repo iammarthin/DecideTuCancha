@@ -1,10 +1,10 @@
 <div class="login-component">
     <div class="form-container">
         <img src="assets/images/logo_.png" alt="Decide Tu Cancha" class="logo">
-        <h2 id="form-title">Iniciar Sesión</h2>
-    
+        
         <!-- Formulario de Inicio de Sesión -->
-        <form id="login-form" class="active">
+        <form [class.hidden]="!isLogin" id="login-form" class="active">
+            <h2>Iniciar Sesión</h2>
             <label for="email">E-mail: *</label>
             <input type="email" id="email" placeholder="Ingrese su e-mail" required>
             <label for="email">Contraseña: *</label>
@@ -14,11 +14,12 @@
             <button type="button" class="btn google">Acceder con Google</button>
             <button type="button" class="btn apple">Acceder con Apple</button>
             <button type="button" class="btn facebook">Acceder con Facebook</button>
-            <p class="toggle-form">¿No tienes cuenta? <a href="#" id="switch-to-register">Regístrate</a></p>
+            <p class="toggle-form">¿No tienes cuenta? <a href="#" (click)="switchToRegister($event)">Regístrate</a></p>
         </form>
     
         <!-- Formulario de Registro -->
-        <form id="register-form">
+        <form [class.hidden]="isLogin" id="register-form">
+            <h2>Registro</h2>
             <label for="name">Nombre Completo:</label>
             <input type="text" id="name" placeholder="Ingrese su nombre completo" required>
             <label for="email-register">E-mail:</label>
@@ -36,7 +37,7 @@
                 <option value="M">Masculino</option>
               </select>
             <button type="submit" class="btn green">Registrarse</button>
-            <p class="toggle-form">¿Ya tienes cuenta? <a href="#" id="switch-to-login">Inicia Sesión</a></p>
+            <p class="toggle-form">¿Ya tienes cuenta? <a href="#" (click)="switchToLogin($event)">Inicia Sesión</a></p>
         </form>
     </div>
 
