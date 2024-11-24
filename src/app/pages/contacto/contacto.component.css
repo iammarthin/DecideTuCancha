@@ -1,0 +1,91 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Contenedor del formulario */
+  .contact-container {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: auto;
+    text-align: left;
+    max-width: 400px;
+    width: 100%;
+    margin: 200px auto; /* Espacio superior de 30px para separar del header */
+    padding: 20px;
+  }
+  
+  /* Título */
+  .title {
+    font-size: 24px;
+    color: #4caf50;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo de etiquetas */
+  label {
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+  
+  /* Estilo de inputs y textarea */
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    box-sizing: border-box;
+  }
+  
+  /* Botones */
+  .btn {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .btn-submit {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .btn-reset {
+    background-color: #ddd;
+    color: #555;
+  }
+  
+  /* Hover para los botones */
+  .btn:hover {
+    opacity: 0.9;
+  }
+  
+  /* Estilo de errores */
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  
