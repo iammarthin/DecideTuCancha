@@ -18,6 +18,7 @@ export const routes: Routes = [
     {path: "reservar", component: ReservaComponent},
     {path: "pago", component: PagoComponent},
     {path: "contacto", component: ContactoComponent},
+    { path: '', redirectTo: '/buscar', pathMatch: 'full' },
     {path:"", redirectTo: "inicio", pathMatch:"full"}, 
 ];
 
