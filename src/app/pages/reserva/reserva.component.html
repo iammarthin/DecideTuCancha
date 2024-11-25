@@ -1,86 +1,85 @@
-<div class="reservation-confirmation" >
-    <a href="#" class="back-link">←</a>
-    <h1>Ya casi terminamos!</h1>
-    <p>Para completar tu reserva, por favor revisa tus datos y luego confirma.</p>
-  
-    <div class="reservation-details-container">
-      <!-- Información de la reserva -->
-      <div class="reservation-details">
-        <h3>DeporPlaza Matamula</h3>
-        <p>Jr. Belisario Flores #900 Lince, Lima</p>
+<div class="reservation-confirmation">
+  <a href="#" class="back-link">←</a>
+  <h1>¡Ya casi terminamos!</h1>
+  <p>Para completar tu reserva, por favor revisa tus datos y luego confirma.</p>
+
+  <div class="reservation-details-container">
+    <!-- Información de la reserva -->
+    <div class="reservation-details">
+      <h3>{{ nombre }}</h3>
+      <p>{{ direccion }}</p>
+      <div class="line"></div>
+      <div class="reservation-info">
+        <div class="info-row">
+          <p><strong>Fecha:</strong></p>
+          <p>jue. 09/05/2024</p>
+        </div>
         <div class="line"></div>
-        <div class="reservation-info">
-            <div class="info-row">
-                <p><strong>Fecha:</strong></p>
-                <p>jue. 09/05/2024</p>
-              </div>
-              <div class="line"></div>
-              <div class="info-row">
-                <p><strong>Turno:</strong></p>
-                <p>15:00 - 16:00</p>
-              </div>
-              <div class="line"></div>
-              <div class="info-row">
-                <p><strong>Precio:</strong></p>
-                <p>S/. 120,00</p>
-              </div>
+        <div class="info-row">
+          <p><strong>Turno:</strong></p>
+          <p>15:00 - 16:00</p>
+        </div>
+        <div class="line"></div>
+        <div class="info-row">
+          <p><strong>Precio:</strong></p>
+          <p>S/. {{ precio }},00</p>
         </div>
       </div>
-  
-      <!-- Formulario de información personal -->
-      <div class="personal-info">
-        <h3>Información personal</h3>
-        <form>
-            <div class="form-group">
-                <label for="name">Nombre: *</label>
-                <input class="form-control" type="text" id="name" placeholder="Ingrese su nombre" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">Teléfono: *</label>
-                <input class="form-control" type="tel" id="phone" placeholder="Ingrese su teléfono" required>
-            </div>
-            <div class="form-group">
-                <label for="email">E-mail: *</label>
-                <input class="form-control" type="email" id="email" placeholder="Ingrese su e-mail" required>
-            </div>
-          <p class="required-note">* Campos obligatorios</p>
-        </form>
-      </div>
     </div>
-  
-    <button class="btn green" (click)="confirmReservation()">Confirmar reserva</button>
+
+    <!-- Formulario de información personal -->
+    <div class="personal-info">
+      <h3>Información personal</h3>
+      <form>
+        <div class="form-group">
+          <label for="name">Nombre: *</label>
+          <input class="form-control" type="text" id="name" placeholder="Ingrese su nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Teléfono: *</label>
+          <input class="form-control" type="tel" id="phone" placeholder="Ingrese su teléfono" required>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail: *</label>
+          <input class="form-control" type="email" id="email" placeholder="Ingrese su e-mail" required>
+        </div>
+        <p class="required-note">* Campos obligatorios</p>
+      </form>
+    </div>
   </div>
 
-  <div class="confirmation-container">
-    <h1>¡Reserva Confirmada!</h1>
-    <div class="confirmation-card">
-      <h3>DeporPlaza Matamula</h3>
-      <p>Jr Belisario Flores #900 Lince, Lima, Lima</p>
-  
-      <div class="confirmation-info">
-        <div class="info-row2">
-          <p><strong>Día:</strong></p>
-          <p>Jueves, 09/05/2024</p>
-        </div>
-        <div class="info-row2">
-          <p><strong>Hora:</strong></p>
-          <p>15:00hrs</p>
-        </div>
-        <div class="info-row2">
-          <p><strong>Duración:</strong></p>
-          <p>60 min</p>
-        </div>
+  <button class="btn green" (click)="confirmReservation()">Confirmar reserva</button>
+</div>
+
+<div class="confirmation-container">
+  <h1>¡Reserva Confirmada!</h1>
+  <div class="confirmation-card">
+    <h3>DeporPlaza Matamula</h3>
+    <p>Jr Belisario Flores #900 Lince, Lima, Lima</p>
+
+    <div class="confirmation-info">
+      <div class="info-row2">
+        <p><strong>Día:</strong></p>
+        <p>Jueves, 09/05/2024</p>
       </div>
-  
-      <p class="note">
-        Recuerda revisar los detalles y ser puntual.<br>
-        En caso de haber un error, puedes cancelar sin cargo dentro de los próximos 30 minutos.
-      </p>
-  
-      <div class="confirmation-actions">
-        <button class="btn gray">Ir a mis reservas</button>
-        <button class="btn green">Pagar</button>
+      <div class="info-row2">
+        <p><strong>Hora:</strong></p>
+        <p>15:00hrs</p>
+      </div>
+      <div class="info-row2">
+        <p><strong>Duración:</strong></p>
+        <p>60 min</p>
       </div>
     </div>
-  </div>  
-  
+
+    <p class="note">
+      Recuerda revisar los detalles y ser puntual.<br>
+      En caso de haber un error, puedes cancelar sin cargo dentro de los próximos 30 minutos.
+    </p>
+
+    <div class="confirmation-actions">
+      <button class="btn gray">Ir a mis reservas</button>
+      <button class="btn green">Pagar</button>
+    </div>
+  </div>
+</div>  

@@ -32,167 +32,62 @@
       </div>
     </div>
   
-    <!-- Mapa de ubicación -->
     <div class="map-container card">
-      <!-- Aquí iría la integración del mapa, por ejemplo Google Maps -->
       <div style="width: 100%">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1159.8996456273958!2d-77.04478273190153!3d-12.083249055559389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c91c10de8f43%3A0x4f2f0801b073d53c!2sDeporPlaza%20Matamula!5e0!3m2!1ses!2spe!4v1730692801999!5m2!1ses!2spe" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
       </div>
     </div>
-  
-    <!-- Resultados de la búsqueda -->
+
     <div class="results-container card">
       <p class="results-info">Se encontraron los siguientes resultados...</p>
       <div class="results-view-options">
         <button class="view-list active"><i class="fas fa-list"></i></button>
         <button class="view-grid"><i class="fas fa-th-large"></i></button>
       </div>
-  
-      <!-- Lista de resultados -->
+
       <div class="results-list">
 
-        <div class="result-item card">
-            <div class="result-image-container">
-              <img style="width: 300px; height: 200px;" src="assets/images/campo1.png" alt="Cancha Deportiva" class="result-image">
-              <span class="price-tag">S/. 120</span>
-            </div>
-            
-            <div class="result-content">
-              <div class="result-header">
-                <span class="sport-type">Fútbol 7</span>
-                <h5 class="place-name">DeportPlaza Matamula</h5>
-                <div class="rating">
-                  <span>5.0</span>
-                  <i class="fas fa-star"></i>
-                  <span class="reviews">(318 reviews)</span>
-                  <i class="fas fa-heart favorite-icon"></i>
-                </div>
+        <div *ngFor="let p of complejosFiltrados" class="result-item card">
+          <div class="result-image-container">
+            <img style="width: 300px; height: 200px;" src="assets/images/campo1.png" alt="Cancha Deportiva" class="result-image">
+            <span class="price-tag">S/. 120</span>
+          </div>
+        
+          <div class="result-content">
+            <div class="result-header">
+              <span class="sport-type">Fútbol 7</span>
+              <h5 class="place-name">{{ p.nombre }}</h5>
+              <div class="rating">
+                <span>5.0</span>
+                <i class="fas fa-star"></i>
+                <span class="reviews">(318 reviews)</span>
+                <i class="fas fa-heart favorite-icon"></i>
               </div>
-              
-              <p class="description">
-                ¡Bienvenidos a DeporPlaza Matamula, el espacio ideal para los entusiastas del deporte y el entretenimiento en familia! Nuestro complejo deportivo está diseñado para ofrecerte la mejor experiencia...
-              </p>
-              
-              <p class="address">Jr Belisario Flores # 900 Lince</p>
-              <p class="facilities">Torneos · Vestuarios · Estacionamiento</p>
-              
-              <div class="time-options">
-                <button class="time-slot">11:00</button>
-                <button class="time-slot">14:00</button>
-                <button class="time-slot">15:00</button>
-                <button class="time-slot">19:00</button>
-              </div>
-              
-              <button class="btn btn-success reserve-button">Reservar</button>
             </div>
+        
+            <p class="description">
+              ¡Bienvenidos a DeporPlaza, el espacio ideal para los entusiastas del deporte y el entretenimiento en familia!
+              Nuestro complejo deportivo está diseñado para ofrecerte la mejor experiencia...
+            </p>
+        
+            <p class="address">{{ p.direccion }}</p>
+            <p class="facilities">{{ p.descripcion }}</p>
+        
+            <div class="time-options">
+              <button class="time-slot">11:00</button>
+              <button class="time-slot">14:00</button>
+              <button class="time-slot">15:00</button>
+              <button class="time-slot">19:00</button>
+            </div>
+        
+            <button 
+      class="btn btn-success reserve-button"
+      (click)="irAReserva(p)">
+      Reservar
+    </button>
+          </div>
         </div>
-
-        <div class="result-item card">
-            <div class="result-image-container">
-              <img src="assets/images/campo2.png" alt="Cancha Deportiva" class="result-image">
-              <span class="price-tag">S/. 120</span>
-            </div>
-            
-            <div class="result-content">
-              <div class="result-header">
-                <span class="sport-type">Fútbol 7</span>
-                <h5 class="place-name">Estadio Lolo Fernandez</h5>
-                <div class="rating">
-                  <span>5.0</span>
-                  <i class="fas fa-star"></i>
-                  <span class="reviews">(318 reviews)</span>
-                  <i class="fas fa-heart favorite-icon"></i>
-                </div>
-              </div>
-              
-              <p class="description">
-                Disfruta del fútbol en el emblemático Estadio Lolo Fernández, con canchas de césped natural, iluminación de calidad y comodidades para vivir la pasión deportiva...
-              </p>
-              
-              <p class="address">Jr. Jorge Chávez 04 , Lima</p>
-              <p class="facilities">Vestuario ·Estacionamiento</p>
-              
-              <div class="time-options">
-                <button class="time-slot">10:00</button>
-                <button class="time-slot">12:30</button>
-                <button class="time-slot">18:00</button>
-              </div>
-              
-              <button class="btn btn-success reserve-button">Reservar</button>
-            </div>
-        </div>
-
-        <div class="result-item card">
-            <div class="result-image-container">
-              <img src="assets/images/campo3.png" alt="Cancha Deportiva" class="result-image">
-              <span class="price-tag">S/. 100</span>
-            </div>
-            
-            <div class="result-content">
-              <div class="result-header">
-                <span class="sport-type">Fútbol 7</span>
-                <h5 class="place-name">Fútbol Plaza</h5>
-                <div class="rating">
-                  <span>5.0</span>
-                  <i class="fas fa-star"></i>
-                  <span class="reviews">(318 reviews)</span>
-                  <i class="fas fa-heart favorite-icon"></i>
-                </div>
-              </div>
-              
-              <p class="description">
-                Futbol Plaza te ofrece espacios impecables para tu juego, con campos sintéticos de última generación que garantizan un rendimiento óptimo en cada partido. Además, disfruta de servicios de primera calidad que...
-              </p>
-              
-              <p class="address">Av. La Republica 180, Santiago de Surco</p>
-              <p class="facilities">Estacionamiento · Torneos </p>
-              
-              <div class="time-options">
-                <button class="time-slot">11:30</button>
-                <button class="time-slot">13:00</button>
-                <button class="time-slot">13:30</button>
-              </div>
-              
-              <button class="btn btn-success reserve-button">Reservar</button>
-            </div>
-        </div>
-
-        <div class="result-item card">
-            <div class="result-image-container">
-              <img src="assets/images/campo4.png" alt="Cancha Deportiva" class="result-image">
-              <span class="price-tag">S/. 100</span>
-            </div>
-            
-            <div class="result-content">
-              <div class="result-header">
-                <span class="sport-type">Fútbol 7</span>
-                <h5 class="place-name">DeporPlaza Campo de Marte</h5>
-                <div class="rating">
-                  <span>5.0</span>
-                  <i class="fas fa-star"></i>
-                  <span class="reviews">(318 reviews)</span>
-                  <i class="fas fa-heart favorite-icon"></i>
-                </div>
-              </div>
-              
-              <p class="description">
-                Depor Plaza, tu destino para el deporte, te brinda instalaciones modernas con equipamiento de vanguardia, desde canchas de última tecnología hasta áreas de descanso, todo en un ambiente amigable y acogedor...
-              </p>
-              
-              <p class="address">Jr. Jorge Chávez 04 , Lima</p>
-              <p class="facilities">Wifi · Vestuario · Estacionamiento</p>
-              
-              <div class="time-options">
-                <button class="time-slot">11:00</button>
-                <button class="time-slot">15:00</button>
-                <button class="time-slot">19:00</button>
-              </div>
-              
-              <button class="btn btn-success reserve-button">Reservar</button>
-            </div>
-        </div>
-          
-        <!-- Repite este bloque .result-item para otros resultados -->
+        
       </div>
     </div>
   </div>
