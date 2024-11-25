@@ -7,7 +7,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class UsuarioService {
 
-  private readonly apiUrl = 'https://fdc9a8e6-1c79-4766-9ba6-f67944405756.mock.pstmn.io/api/Usuarios';
+  private readonly apiUrl = 'http://44.192.117.88/api/Usuarios';
 
   private loggedUserSubject = new BehaviorSubject<any>(this.getLoggedUser());
   public loggedUser$: Observable<any> = this.loggedUserSubject.asObservable();
