@@ -23,8 +23,11 @@
           <li class="nav-item">
             <a class="btn btn-primary" routerLink="./registro">Registro</a>
           </li>
-          <li class="nav-item">
-            <a class="btn btn-secundary" routerLink="./login">Iniciar Sesión</a>
+          <li class="nav-item" *ngIf="loggedUser">
+            <span class="btn btn-primary">Bienvenido, {{ loggedUser.nombre }}</span>
+          </li>
+          <li class="nav-item" *ngIf="loggedUser">
+            <a class="btn btn-primary" (click)="logout()">Cerrar session</a>
           </li>
         </ul>
       </div>

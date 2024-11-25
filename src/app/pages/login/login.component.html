@@ -3,7 +3,7 @@
         <img src="assets/images/logo_.png" alt="Decide Tu Cancha" class="logo">
         
         <!-- Formulario de Inicio de Sesión -->
-        <form [class.hidden]="!isLogin" id="login-form" class="active">
+        <form [class.hidden]="!isLogin" id="login-form" class="active"  (submit)="__validar_login($event)">
             <h2>Iniciar Sesión</h2>
             <label for="email">E-mail: *</label>
             <input type="email" id="email" placeholder="Ingrese su e-mail" required>
