@@ -51,7 +51,8 @@ export class LoginComponent {
         const usuarioValido = usuarios.find(
           (usuario: any) => usuario.email === email && usuario.contraseña === password
         );
-
+        console.log(usuarios);
+        console.log(usuarioValido);
         if (usuarioValido) {
           console.log('Inicio de sesión exitoso:', usuarioValido);
           this.userService.login(usuarioValido);
@@ -59,6 +60,8 @@ export class LoginComponent {
           this.router.navigate(['/inicio']);
 
         } else {
+          console.log("error");
+          alert("Credenciales Invalidas")
           this.errorMessage = 'Credenciales inválidas';
         }
       },

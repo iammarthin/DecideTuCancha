@@ -30,11 +30,11 @@ export class ReservaComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // Obtener datos de la ruta (queryParams) si es necesario
+   
     this.route.queryParams.subscribe(params => {
-      this.nombre = params['nombre'] || '';  // Asegúrate de que el parámetro esté presente
+      this.nombre = params['nombre'] || ''; 
       this.direccion = params['direccion'] || '';
-      this.precio = params['precio'] || 0; // Aquí asegúrate de que `precio` es un número
+      this.precio = params['precio'] || 0; 
     });
 
   }
